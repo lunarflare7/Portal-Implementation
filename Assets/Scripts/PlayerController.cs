@@ -11,12 +11,11 @@ public class PlayerController : MonoBehaviour
     [Header("Camera")]
     [SerializeField] private Transform cam;
     [SerializeField] private float sensitivity;
-    private Vector2 mouseDelta;
+    private Vector2 mouseDelta;   
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
@@ -29,9 +28,9 @@ public class PlayerController : MonoBehaviour
 
         Vector3 moveVector = new Vector3(moveDir.x, 0, moveDir.y);
 
-        moveVector = transform.worldToLocalMatrix.MultiplyVector(moveVector);
+        moveVector = transform.TransformDirection(moveVector);
 
-        rb.linearVelocity = speed * moveVector;
+        rb.linearVelocity = speed * moveVector + (rb.linearVelocity.y * Vector3.up);
     }
 
     public void OnMove(InputAction.CallbackContext ctx)
