@@ -23,8 +23,11 @@ public class PlayerController : MonoBehaviour
         float rotY = -mouseDelta.y * sensitivity * Time.deltaTime;
         float rotX = mouseDelta.x * sensitivity * Time.deltaTime;
 
-        cam.Rotate(rotY, 0, 0);
-        transform.Rotate(0, rotX, 0);
+        if(!Input.GetKey(KeyCode.LeftShift))
+        {
+            cam.Rotate(rotY, 0, 0);
+            transform.Rotate(0, rotX, 0);
+        }
 
         Vector3 moveVector = new Vector3(moveDir.x, 0, moveDir.y);
 

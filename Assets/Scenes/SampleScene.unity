@@ -695,7 +695,7 @@ Transform:
   m_GameObject: {fileID: 555941901}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.71, y: 3.23, z: -9.25}
+  m_LocalPosition: {x: -6.47, y: 2.465, z: -4.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -854,7 +854,7 @@ Transform:
   m_GameObject: {fileID: 1094228151}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5894699, y: 0.55662, z: 0}
+  m_LocalPosition: {x: 0.11, y: 0, z: -2}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -874,8 +874,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   portalCam: {fileID: 1883494578}
-  linkedPortal: {fileID: 1545368088}
+  destinationPortal: {fileID: 1545368088}
   portalMat: {fileID: 2100000, guid: 471115bec24d08f4c91d9228066006f3, type: 2}
+  recursionLimit: 10
+  fadeGradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 0.9852941, b: 0.9852941, a: 1}
+    key2: {r: 0, g: 0.0074772835, b: 1, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 38936
+    ctime2: 65535
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 2
 --- !u!1 &1137930935
 GameObject:
   m_ObjectHideFlags: 0
@@ -1226,7 +1257,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fb410162a35d08c59b4175371a731683, type: 2}
+  - {fileID: 2100000, guid: 9b57e0645d48da54bb09a8646d103227, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1502,14 +1533,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1545368084}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 2.77, y: 0.55662, z: -8.78}
+  m_LocalRotation: {x: 0, y: 0.9999619, z: 0, w: 0.008726652}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1443482305}
   m_Father: {fileID: 1960799883}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 179, z: 0}
 --- !u!114 &1545368089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1523,8 +1554,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   portalCam: {fileID: 1443482308}
-  linkedPortal: {fileID: 1094228155}
+  destinationPortal: {fileID: 1094228155}
   portalMat: {fileID: 2100000, guid: 471115bec24d08f4c91d9228066006f3, type: 2}
+  recursionLimit: 10
+  fadeGradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 0.9852941, b: 0.9852941, a: 1}
+    key2: {r: 1, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 38936
+    ctime2: 65535
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 2
 --- !u!1 &1629459109
 GameObject:
   m_ObjectHideFlags: 0
